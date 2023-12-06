@@ -1,0 +1,50 @@
+iv) (a)
+
+SELECT * FROM students;
+
+1	kasun gamage	kandy	2
+2	Daniel sam	Jaffna	3
+3	Hansi silva	colombo	1
+4	Ranidu Hearth	Matara	3
+5	Praneeth Wijesingha	Kandy	4
+6	Nuwani Hearth	Rathnapura	1
+
+
+(b)
+
+
+SELECT student_id, Name, city
+FROM students
+WHERE city = 'Kandy';
+
+1	kasun gamage	kandy
+5	Praneeth Wijesingha	Kandy
+
+
+(C)
+
+UPDATE students
+SET city = 'Galle'
+WHERE student_id = 4;
+
+1	kasun gamage	kandy	2
+2	Daniel sam	Jaffna	3
+3	Hansi silva	colombo	1
+4	Ranidu Hearth	Galle	3
+5	Praneeth Wijesingha	Kandy	4
+6	Nuwani Hearth	Rathnapura	1
+NULL	NULL	NULL	NULL
+
+
+(d)
+
+SELECT students.student_id, students.Name, students.city, course.name
+FROM students
+JOIN course ON students.course_id = course.course_id;
+
+1	kasun gamage	kandy	Graphic design
+2	Daniel sam	Jaffna	Mobile App Development
+3	Hansi silva	colombo	web development
+4	Ranidu Hearth	Galle	Mobile App Development
+5	Praneeth Wijesingha	Kandy	Java
+6	Nuwani Hearth	Rathnapura	web development
