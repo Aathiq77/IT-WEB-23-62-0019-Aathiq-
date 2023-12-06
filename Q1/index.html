@@ -1,0 +1,507 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Taskia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+header {
+    width: 1290px;
+    max-width: 95%;
+    margin: 20px auto auto;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0
+}
+
+header,header .h2 {
+    color: #525ffb;
+    display: flex;
+    align-items: center
+}
+
+header .h2 {
+    justify-content: center;
+    width: 150px;
+    height: 65px
+}
+
+header .btn-try {
+    display: flex;
+    flex-direction: column;
+}
+
+header .btn-try button {
+    font-family: inherit;
+    padding: 10px 30px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #525ffb;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: .05em;
+    line-height: 27px;
+    text-align: left;
+    color: #525ffb;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-section .container-hero {
+    width: 1290px;
+    margin: auto;
+    max-width: 95%;
+}
+
+.hero-section .content-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-section .content-hero .left-side {
+    width: 700px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section .content-hero .left-side h1 {
+    font-weight: 700;
+    font-size: 70px;
+    letter-spacing: -.01em;
+    line-height: 97px;
+    text-align: left;
+    color: #1e1c24;
+}
+
+.hero-section .content-hero .left-side p {
+    width: 90%;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: left;
+    color: #b1aaaa;
+    margin-top: 15px;
+}
+
+.hero-section .content-hero .left-side .form-group {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.hero-section .content-hero .left-side .form-group input {
+    width: 320px;
+    background: transparent;
+    outline: none;
+    border: 1px solid #ebebeb;
+    border-radius: 40px;
+    padding: 25px 18px;
+    font-weight: 300;
+    font-size: 17px;
+    letter-spacing: .04em;
+    text-align: left;
+    color: rgba(30, 28, 36, 0.85);
+    opacity: .36;
+}
+
+.hero-section .content-hero .left-side .form-group button {
+    font-family: inherit;
+    padding: 25px 40px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    background: #525ffb;
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: .05em;
+    line-height: 27px;
+    text-align: left;
+    color: #fff;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-left: 35px;
+}
+
+.hero-section .content-hero .right-side {
+    width: 580px;
+    height: 520px;
+    position: relative;
+}
+.service {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0
+}
+
+.service .header-service {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.service .header-service h2 {
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    color: #1e1c24
+}
+.custom1{
+    background-color: #525ffb;
+}
+.custom2{
+    background-color: aquamarine;
+}
+.custom3{
+    background-color: bisque;
+}
+.management .content-management  .right-side button {
+    padding: 15px 40px;
+    border-radius: 30px;
+    background: #525ffb;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: .04em;
+    text-align: left;
+    color: #fff;
+    margin-top: 20px
+}
+
+
+.management .content-management  .right-side h3 {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    text-align: left;
+    color: #1e1c24
+}
+
+.management .content-management  .right-side p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: left;
+    color: #b1aaaa;
+    margin-top: 16px
+}
+.management .content-management  .left-side button {
+    padding: 15px 40px;
+    border-radius: 30px;
+    background: #525ffb;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: .04em;
+    text-align: left;
+    color: #fff;
+    margin-top: 20px
+}
+
+
+.management .content-management  .left-side h3 {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    text-align: left;
+    color: #1e1c24
+}
+
+.management .content-management  .left-side p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: left;
+    color: #b1aaaa;
+    margin-top: 16px
+}
+.trustus {
+    padding: 100px 0;
+}
+
+.header-trustus {
+    text-align: center;
+}
+
+.header-trustus h2 {
+    font-weight: 700;
+    font-size: 36px;
+    color: #1e1c24;
+}
+
+.content-trustus img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content-trustus h3 {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.5;
+    color: #525ffb;
+}
+
+.image-container {
+    position: relative;
+    height: 0;
+    padding-bottom: 75%; /* Set a ratio for the height */
+    overflow: hidden;
+}
+
+.position-left-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Set to 50% for two side-by-side images */
+    height: 100%;
+}
+
+.position-right-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%; /* Set to 50% for two side-by-side images */
+    height: 100%;
+}
+
+.middle-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.trust-us .trust h1 {
+    font-weight: 400;
+    font-size: 80px;
+    color: #525ffb
+}
+footer {
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    border-top: 1px solid #e6e6e6;
+}
+
+footer .header-footer {
+    text-align: center;
+}
+
+footer .header-footer h3 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    color: #1e1c24;
+    margin-bottom: 20px;
+}
+
+footer .header-footer h5 {
+    max-width: 95%;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #1e1c24;
+    margin: auto;
+}
+
+footer .form-group {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+}
+
+footer .form-group input {
+    width: 320px;
+    background: transparent;
+    outline: none;
+    border: 1px solid #ebebeb;
+    border-radius: 40px;
+    padding: 25px 18px;
+    font-weight: 300;
+    font-size: 17px;
+    letter-spacing: .04em;
+    text-align: left;
+    color: rgba(30, 28, 36, 0.85);
+    opacity: 0.36;
+    
+}
+
+footer .form-group button {
+    padding: 25px 40px;
+    background-color: #525ffb;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: .05em;
+    line-height: 27px;
+    text-align: center;
+    color: #fff;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-left: 35px;
+}
+
+  
+  </style>
+</head>
+<body>
+
+<header>
+    <h2><strong>Taskia</strong></h2>
+        <div class="btn-try">
+            <button class="btn btn-outline-primary">Try free</button>
+        </div>
+</header>
+      
+<section class="hero-section">
+    <div class="container container-hero">
+        <div class="row content-hero">
+            <div class="col-md-7 left-side">
+                <h1>Task management and lists Tool</h1>
+                <p>We believe that designing products and services in close partnership with our clients is the only way to have a real impact on their business.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Name@company.com"/>
+                        <button type="submit" class="btn btn-primary">Try it free</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-5 right-side">
+                <img src="Images/hero image.jpg" class="img-fluid" loading="lazy" alt="Hero Image">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="service">
+    <div class="header-service">
+        <h2>Featured Service that We Provide</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card custom1" id="1">
+                    <div class="card-body">
+                        <img src="Images/Image 3.png" class="card-img-top" alt="Service Image">
+                        <h5 class="card-title">Service 1</h5>
+                        <p class="card-text">Save time, avoid losing work and information, delegate, and track tasks to stay on schedule.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card custom2" id="2">
+                    <div class="card-body">
+                        <img src="Images/Image 2.png" class="card-img-top" alt="Service Image">
+                        <h5 class="card-title">Service 2</h5>
+                        <p class="card-text">Save time, avoid losing work and information, delegate, and track tasks to stay on schedule.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card custom3" id="3">
+                    <div class="card-body">
+                        <img src="Images/Image 1.png" class="card-img-top" alt="Service Image">
+                        <h5 class="card-title">Service 3</h5>
+                        <p class="card-text">Save time, avoid losing work and information, delegate, and track tasks to stay on schedule.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="management" style="margin-top: 200px;">
+    <div class="container container-management">
+        <div class="row content-management">
+            <div class="col-md-6 ">
+                <div class="left-side">
+                    <img src="Images/Image 8.jpg" class="img-fluid rounded-start" alt="Mockup">
+                </div>
+            </div>
+            <div class="col-md-6 item right-side">
+                <h3>Why do you need task management software?</h3>
+                <p>Do you waste time organizing sticky notes, searching your email and apps for to-dos, and figuring out what to work on first? Then you need one solution to prioritize your tasks, manage your time, and meet your deadlines.</p>
+                <button class="btn btn-primary">Learn more</button>
+            </div>
+            <div class="col-md-6 item left-side" style=" margin-top: 200px">
+                <h3>Why do you need task management software?</h3>
+                <p>Do you waste time organizing sticky notes, searching your email and apps for to-dos, and figuring out what to work on first? Then you need one solution to prioritize your tasks, manage your time, and meet your deadlines.</p>
+                <button class="btn btn-primary">Learn more</button>
+            </div>
+            <div class="col-md-6 " style="margin-top: 200px;">
+                <div class="right-side">
+                    <img src="Images/Image 7.jpg" class="img-fluid rounded-start" alt="Mockup">
+                </div>
+            </div>
+            <div class="col-md-6 " >
+                <img src="Images/Image 6.jpg" class="img-fluid rounded-start" alt="Mockup" style="margin-right: 30px;">
+                <img src="Images/Image 9.jpg" class="img-fluid rounded-start" alt="Mockup">
+                
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="trust-us" style="margin-top: 200px;">
+    <div class="container">
+        <div class="header-trustus">
+            <h2>Trust us and feel free to try our service</h2>
+        </div>
+        <div class="row trust">
+            
+            <div class="col-md-4">
+                <img src="Images/Image 4.jpg" class="img-circle" width="200" height="200" alt="Image 1">
+            </div>
+            <div class="col-md-4 d-flex align-items-center justify-content-center ">
+                <h1 class="text-primary display-4">100 000</h1>
+            </div>
+            <div class="col-md-4">
+                <img src="Images/Image 5.jpg" class="img-circle" width="200" height="200" alt="Image 2">
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="container">
+    <div class="header-footer">
+        <h3><strong>Get better work done</strong></h3>
+        <h5><strong>See why millions of people across 195 countries use Dash.</strong></h5>
+    </div>
+    <form>
+        <div class="form-group ">
+            <input type="email" class="form-control" placeholder="Name@company.com"/>
+            <button type="submit" class="btn btn-primary">Try it free</button>
+        </div>
+    </form>
+</footer>
+
+
+
+
+
+
+
+</body>
+</html>
